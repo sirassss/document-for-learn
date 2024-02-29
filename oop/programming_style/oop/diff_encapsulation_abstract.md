@@ -23,6 +23,6 @@ của một đối tượng cụ thể.
 
 #### abstract
 Tính trừu tượng có ý nghĩa rộng hơn, giúp tạo ra một giao diện đơn giản để tương tác với các đối tượng mà không cần
-biết chi tiết triển khai bên trong của chúng. Tính trừu tượng giúp tạo ra một mô hình dữ liệu trừutượng, giúp giảm độ
+biết chi tiết triển khai bên trong của chúng. Tính trừu tượng giúp tạo ra một mô hình dữ liệu trừu tượng, giúp giảm độ
 phức tạp của hệ thống và dễ dàng bảo trì và mở rộng trong tương lai. Tính trừu tượng có ý nghĩa ở mức độ của các đối
 tượng được tạo ra và tương tác với nhau trong hệ thống.

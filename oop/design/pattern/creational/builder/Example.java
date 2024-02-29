@@ -1,59 +1,87 @@
 package design.pattern.creational.builder;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Example {
-
-}
-
-class Director {
-    private IBuilder builder;
-
-    public void builder(IBuilder builder) {
-        this.builder = builder;
-    }
-
-    public void buildProductA() {
-        this.builder.buildPartA();
-        this.builder.buildPartB();
+    public static void main(String[] args) {
+        Pizza pizza = new Pizzeria().makePizza(new PepperoniPizzaBuilder());
+        Pizza pizza2 = new Pizzeria().makePizza(new HawaiianPizzaBuilder());
+        System.out.println(pizza.toString());
+        System.out.println(pizza2.toString());
     }
 }
 
-interface IBuilder {
-    void buildPartA();
-    void buildPartB();
-    void buildPartC();
+class Pizza {
+    private String dough;
+    private String sauce;
+    private String[] topping;
+
+    public void setDough(String dough) {
+        this.dough = dough;
+    }
+    public void setSauce(String sauce) {
+        this.sauce = sauce;
+    }
+    public void setTopping(String[] topping){
+        this.topping = topping;
+    }
+
+    public String getDough() {
+        return dough;
+    }
+
+    public String getSauce() {
+        return sauce;
+    }
+
+    public String[] getTopping() {
+        return topping;
+    }
 }
 
-class BuilderA implements IBuilder {
+/**
+ * builder interface
+ * */
+abstract class PizzaBuilder {
+    protected Pizza pizza;
 
-    private Product product = new Product();
+    protected PizzaBuilder() {
+        pizza = new Pizza();
+    }
+
+    public Pizza getPizza() {
+        return pizza;
+    }
+    public abstract void createPizza();
+}
+
+/**
+ * builder
+ * */
+class HawaiianPizzaBuilder extends PizzaBuilder {
+
     @Override
-    public void buildPartA() {
-        product.addPart("Name");
-    }
-
-    @Override
-    public void buildPartB() {
-        product.addPart("Ram");
-    }
-
-    @Override
-    public void buildPartC() {
-        product.addPart("Screen");
+    public void createPizza() {
+        pizza.setDough("cross");
+        pizza.setSauce("mild");
+        pizza.setTopping(new String[] {"ham", "pineapple"});
     }
 }
 
-class Product {
+class PepperoniPizzaBuilder extends PizzaBuilder {
 
-    private List<String> parts = new ArrayList<>();
-    // fixed code
-    public void addPart(String part) {
-        this.parts.add(part);
+    @Override
+    public void createPizza() {
+        pizza.setDough("pan baked");
+        pizza.setSauce("tomato");
+        pizza.setTopping(new String[] {"pepperoni", "cheese"});
     }
+}
 
-    public String getParts() {
-        return "Product: " + String.join(",", parts);
+/**
+ * Director
+ * */
+class Pizzeria {
+    public Pizza makePizza(PizzaBuilder builder) {
+        builder.createPizza();
+        return builder.getPizza();
     }
 }

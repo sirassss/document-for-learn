@@ -15,7 +15,7 @@
 
 ## ARCHITECTURE
 
-![ar](architure.webp)
+![ar](../../../../../image/architure.webp)
 
 - `Abstract Factory` (Factory trừu tượng):
 Đây là giao diện trừu tượng dùng để tạo ra các product. Nó không thực hiện logic tạo ra product mà để lại cho

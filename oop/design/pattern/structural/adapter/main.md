@@ -24,7 +24,7 @@
 
 
 #### OBJECT ADAPTER - COMPOSITION
-![adapter](adapter.png)
+![adapter](../../../../../image/adapter.png)
 
 - `Client` là một class chứa business logic của chương trình
 - `Client interface` mô tả một giao thức mà các lớp khác phải tuân theo để có thể collab với client code
@@ -35,7 +35,7 @@
   object được bao bọc ở định dạng mà nó có thể hiểu được.
 
 #### CLASS ADAPTER - INHERITANCE
-![class-adapter](class-adap.webp)
+![class-adapter](../../../../../image/class-adap.webp)
 
 - `Class Adapter`: không cần phải bọc bất kỳ object nào vì nó kế thừa các hành vi từ client và service. 
 - Adaptation xảy ra trong các phương thức bị ghi đè. 

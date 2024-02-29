@@ -6,9 +6,12 @@
 
 ## Core concept
 
-      - Là quá trình mà một lớp (class) có được các thuộc tính của một lớp khác. 
-      - Các thuộc tính đó có thể là một phương thức (method) hoặc một trường (field) nào đó. 
-      - Lớp được kế thừa sẽ được gọi chung là lớp cha, còn lớp kế thừa sẽ được gọi chung là lớp con.
+* Là khả năng cho phép ta xây dựng một lớp mới dựa trên các định nghĩa của một lớp đã có.
+* Có thể chia sẻ hay mở rộng các đặc tính sẵn có mà không phải tiến hành định nghĩa lại.
+* Là một lớp (class) có được các thuộc tính của một lớp khác. Các thuộc tính đó có thể là một phương thức (method) hoặc
+  một trường (field) nào đó.
+* Lớp được kế thừa sẽ được gọi chung là lớp cha, còn lớp kế thừa sẽ được gọi chung là lớp con.
+
 
 #### Advantage:
 
@@ -79,6 +82,8 @@ sử dụng phương thức ghi đè (method overriding) hoặc phương thức 
 
 ## Core concept
 
+> Mọi thứ hoạt động trong đối tượng như black box, chỉ có thể nhìn thấy input và output không thể biết process như thế nào
+
 * Trừu tượng tập trung vào các đặc tính thiết yếu của đối tượng, tùy thuộc vào góc độ của người nhìn.
 
       - Ưu điểm chính của thừa kế là nhờ có nó ta mới có được đa hình (polymorphism), và nhờ đa hình mà ta có trừu tượng (abstract).
@@ -106,7 +111,8 @@ sử dụng phương thức ghi đè (method overriding) hoặc phương thức 
 * Giảm sự phụ thuộc giữa các đối tượng
 * Giúp cho chương trình nó được sắp xếp 1 cách có logic và có ý nghĩa >> dễ hiểu >> dễ bảo trì, sửa chữa
 
-       Khi 1 đứa nào đó đọc vào thấy, À! đối tượng này là con heo và nó thuộc lớp động vật thì chắc chắn nó sẽ có những thuộc tính này hành vi này!
+       Khi 1 đứa nào đó đọc vào thấy, À! đối tượng này là con heo và nó thuộc lớp động vật thì chắc chắn nó sẽ có
+       những thuộc tính này hành vi này!
 
 * Giúp tái sử dụng mã nguồn
 
@@ -157,7 +163,7 @@ sử dụng phương thức ghi đè (method overriding) hoặc phương thức 
         }
        }
      ````
-
+* Trong Java, tính đóng gói được thể hiện thông qua phạm vi truy cập (access modifier)
 
 ### Rule
 

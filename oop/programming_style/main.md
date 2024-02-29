@@ -20,3 +20,6 @@
 
     tập trung vào xây dựng các khía cạnh chung của hệ thống, tách các phần bussiness logic với nhau hoặc là tách bussiness logic với system logic
     Các điểm chen lấn được gọi là "joinpoint" (điểm nối). Tập hợp các điểm nối này được gọi là "pointcut" (cắt điểm). Blackbox XuatNhapHang, do bị chen lấn, được gọi là "target object" 
+
+- `Nối mềm` (soft-wiring) cho phép sử dụng một lớp (hoặc blackbox) mà không cần gọi trực tiếp các phương thức công khai
+  của nó trong mã nguồn

@@ -16,8 +16,8 @@
 
 ## ARCHITECTURE
 
-![builder_1](builder_1.webp)
-![builder_2](builder_2.webp)
+![builder_1](../../../../../image/builder_1.webp)
+![builder_2](../../../../../image/builder_2.webp)
 
 - `Builder`: là 1 thành phần trừu tượng để tạo ra 1 hoặc nhiều phần đối tượng của `product`
 - `ConcreateBuilder`: là thành phần triển khai, cụ thể hóa các lớp trừu tượng cho để tạo ra các thành phần và tập hợp

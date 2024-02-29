@@ -1,58 +1,31 @@
-## Mục đích && ưu
+## CONCEPT
 
-1. Có thể chắc chắn rằng một lớp chỉ có một instance
-2. Có khả năng truy cập đến instance từ mọi nơi (global access)
-3. Đối tượng singleton chỉ được khởi tạo duy nhất một lần khi nó được yêu cầu lần đầu.
-4. Thường được dùng cho các trường hợp giải quyết các bài toán cần truy cập vào các ứng dụng như: Shared resource,
-   Logger, Configuration, Caching, Thread pool, …
-5. Có thể chắc chắn rằng một lớp chỉ có một instance
+- Thuộc nhóm Creational
+- Cung cấp 1 instance duy nhất được khởi tạo trong lúc runtime
 
-## nhược
+## PURPOSE
 
-1. vi phạm single responsibility principle
-2. các đối tượng biết quá nhiều về nhau -> không có tính đóng gói
+- Đảm bảo chắc chắn rằng một lớp chỉ có một instance
+- Có khả năng truy cập đến instance từ mọi nơi (global access)
+- Đối tượng singleton chỉ được khởi tạo duy nhất một lần khi nó được yêu cầu lần đầu.
 
-## code
 
-* no thread safe
+## ARCHITECTURE
 
-````java
-public class Singleton {
-    private Singleton() {
-    }
+![ar](../../../../../image/singleton.png)
 
-    private static Singleton1 instance = null;
+## BENEFIT
 
-    public static Singleton1 Instance() {
-        get {
-            if (instance == null) {
-                instance = new Singleton();
-            }
-            return instance;
-        }
-    }
-}
-````
+### PROS
 
-* thread safe
+- Quản lý truy cập tốt hơn
 
-````java
-public class Singleton2 {
-    Singleton2() {
-    }
+### CONS
 
-    private static object lock = new object();
-    private static Singleton2 instance = null;
+- vi phạm single responsibility principle
+- các đối tượng biết quá nhiều về nhau -> không có tính đóng gói
 
-    public static Singleton2 Instance() {
-        get {
-            synchronized (lock) {
-                if (instance == null) {
-                    instance = new Singleton2();
-                }
-                return instance;
-            }
-        }
-    }
-}
-````
+## USE WHEN
+
+- Thường được dùng cho các trường hợp giải quyết các bài toán cần truy cập vào các ứng dụng như: Shared resource,
+  Logger, Configuration, Caching, Thread pool, …

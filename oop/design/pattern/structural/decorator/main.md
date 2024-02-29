@@ -2,10 +2,9 @@
 
 - Thuộc nhóm Structural
 - Lồng các chức năng với nhau chỉ với 1 đối tượng
-
-
-
-
+- Lớp Decorator mới để bọc lấy một đối tượng hiện có và thêm hoặc bớt chức năng của đối tượng đó
+- Mở rộng hoặc thay đổi hành vi của một đối tượng mà không làm thay đổi hành vi của các đối tượng khác trong hệ thống
+- Tạo ra 1 stack các hành vi, chức năng cho 1 đối tượng
 
 ## PURPOSE
 
@@ -34,7 +33,7 @@
 ### PROS
 
 - Có thể mở rộng hành vi của đối tượng mà không cần tạo class con mới.
-- Có thể thêm hoặc xoá tính năng của một đối tượng trong lúc thực thi.
+- Có thể thêm hoặc xoá tính năng của một đối tượng trong lúc thực thi 1 cách linh hoạt.
 - Một đối tượng có thể được bao bọc bởi nhiều wrapper cùng một lúc.
 - Tuân thủ SRP - Có thể chia nhiều cách thực thi của một phương thức trong một lớp cho nhiều lớp nhỏ hơn.
 
